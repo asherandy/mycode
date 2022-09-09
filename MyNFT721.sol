@@ -20,7 +20,7 @@ contract NicMeta is ERC721Enumerable, Ownable {
     uint256 public constant MAX_SUPPLY = 3333;
 
     //公售价格  前1000个0.01元 后面的 0.03
-    uint256 public mintPrice = 0.00000001 ether;
+    uint256 public mintPrice = 0.01 ether;
     // uint256 private mp003=300000000000000 wei;
     //uint256 private mp003=0.0003 ether;
     //uint256 private mp13=1;
