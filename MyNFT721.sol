@@ -95,13 +95,7 @@ contract NicMeta is ERC721Enumerable, Ownable {
     function _mintNicMeta(uint256 tokenQuantity)  internal {
         //循环mint
         for (uint256 i = 0; i < tokenQuantity; i++) {
-
-            // 这里需要做特殊处理，前1000个 0.01，后面的0.03   这里函数回滚了    需要监听事件  修改 mintprice
-           //if( totalSupply()>=3) 
-            //    mintPrice = mp003;
-            //require(mintPrice <= msg.value,"Not enough ether sent mint");
-
-
+       
             // 这里要用随机数
              uint256 mintIndex = generateRandomId(1);
 
@@ -146,17 +140,7 @@ contract NicMeta is ERC721Enumerable, Ownable {
         alreadyPopCount++;
         return pointIndex;
     }
-
-     
-    // 销毁
-    function kil111111l() public view {         
-       
-        //selfdestruct(this);
-        //selfdestruct(msg.sender);
-    }
-
-
-
+    
     // 判断当前时间是否大于开始时间
     function mintingActive() public view returns (bool) {
         return block.timestamp > publicMintStart;
