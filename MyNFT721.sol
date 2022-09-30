@@ -210,16 +210,6 @@ contract NicMeta is ERC721Enumerable, Ownable {
         mintPrice = _mintPrice;
     }
 
-    //价格分隔位置
-    //function setmp13(uint256 _sm13) public onlyOwner{
-    //    mp13=_sm13;
-    //}
-
-    // 新价格
-   // function setmp003(uint256 _sm3) public onlyOwner{
-   //     mp003 = _sm3;
-   // }
-
     //设置盲盒的URI
     function setNotRevealedURI(string memory _notRevealedURI) public onlyOwner {
         notRevealedUri = _notRevealedURI;
