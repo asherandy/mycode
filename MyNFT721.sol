@@ -47,6 +47,9 @@ contract NicMeta is ERC721Enumerable, Ownable {
     uint32 private alreadyPopCount;
     // 池子
     mapping(uint => uint) public pool;
+    
+    // 白名单集合
+     mapping(address => bool) whitelistedAddresses;
 
     // mint 开始时间
     uint256 public publicMintStart;
